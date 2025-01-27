@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rochester&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <title>Vue Project</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="wrapper">
+        <header>
+          <nav>
+            <ul class="nav-links">
+              <li>
+                <router-link :to="{ name: 'Home'}">Home</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'About'}">About</router-link>
+              </li>
+              <li>
+                <router-link :to="{ name: 'Recipes'}">Recipes</router-link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <router-view></router-view>
+        </main>
+      </div>
+      <footer class="footer">
+        <p class="footer-text">Let's be Friends!</p>
+        <div class="socials">
+          <img src="img/facebook-icon.png" alt="Facebook icon" width="30" />
+          <img src="img/instagram-icon.png" alt="Instagram icon" width="30" />
+          <img src="img/tiktok-icon.png" alt="Tiktok icon" width="30" />
+        </div>
+        <div class="copyright">
+          <small>&copy; Knead to Know, 2025</small>
+        </div>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
